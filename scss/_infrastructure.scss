@@ -1,0 +1,76 @@
+
+
+.infrastructure-container{
+    background-color: $very-dark-gray-blue;
+    height: 400px;
+    background-image: url(../images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: -14rem -26rem;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    h2, p{
+        color: $white;
+    }
+
+    h2{
+        font-size: 30px;
+        position: relative;
+        top: -7rem;
+        left: 2rem;
+    }
+
+    p{
+        line-height: 28px;
+        width: 35rem;
+        position: relative;
+        top: -5.5rem;
+        left: 2rem;
+    }
+
+    .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .phone-img{
+        position: relative;
+        top: -4.5rem;
+        margin-left: 4rem;
+        width: 100%;
+    }
+}
+
+@media(max-width: 700px){
+    .infrastructure-container {
+            width: 23.44rem;
+            height: 625px;
+    
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .phone-img {
+                width: 100%;
+                left: -3.7rem;
+            }
+    
+            h2 {
+                top: -7rem;
+                left: 0;
+                text-align: center;
+            }
+    
+            p {
+                width: 15rem;
+                position: relative;
+                text-align: center;
+                top: -5.5rem;
+                left: 4.5rem;
+            }
+        }
+}

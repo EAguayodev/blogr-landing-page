@@ -1,0 +1,74 @@
+.source-container{
+
+    // overflow-x: hidden;
+    // position: relative;
+    
+    .row{
+        display: flex;
+        align-items: center;
+    }
+
+    h3{
+        color: $very-dark-blue;
+        font-family: $ubuntu;
+        font-weight: 500;
+        position: relative;
+        right: 14rem;
+        font-size: 30px;
+        top: 5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    p{
+        width: 31rem;
+        line-height: 26px;
+        position: relative;
+        right: 14rem;
+        top: 4rem;
+        font-weight: 400;
+        font-family: $overpass;
+        color: $very-dark-grayish-blue;
+    }
+
+    .illust-laptop{
+        position: relative;
+        right: 17rem;
+        top: 7rem;
+    }
+}
+
+@media(max-width: 700px){
+    .source-container {
+            width: 23.44rem;
+            height: 57.9rem;
+    
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+    
+            .illust-laptop {
+                width: 328px;
+                right: 0;
+                top: 1rem;
+            }
+    
+            h3 {
+                right: 0rem;
+                font-size: 28px;
+                top: 3rem;
+            }
+    
+            .source-2 {
+                top: 5rem;
+            }
+    
+            p {
+                right: 0rem;
+                text-align: center;
+                top: 4rem;
+                width: 18rem;
+            }
+        }
+}

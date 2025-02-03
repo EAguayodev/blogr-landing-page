@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+header {
+  background-image: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-repeat: no-repeat;
+  background-position: 25% center;
+  height: 600px;
+  border-bottom-left-radius: 50px;
+  padding: 1.5rem;
+}
+header navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+header .menu-container__links {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+header .dropdown-nav__menu {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(208, 49%, 24%);
+  width: 10.5rem;
+  height: 9rem;
+  list-style: none;
+  display: none;
+  box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
+  -webkit-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
+  line-height: 23px;
+  border-radius: 0.125rem;
+  padding: 10px;
+  margin: 1rem 0 0 0.8rem;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+}
+header .divider {
+  display: none;
+}
+header .arrow {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+header button {
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: hsl(0, 0%, 100%);
+}
+header button:hover .arrow {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+header .hamburger {
+  display: none;
+  cursor: pointer;
+}
+header .header-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 7rem;
+}
+header .header-box h1,
+header .header-box p {
+  color: hsl(0, 0%, 100%);
+}
+header .header-box p {
+  position: relative;
+  margin-top: 1rem;
+}
+header .header-box .btn {
+  width: 137px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+header .header-box .btn-free {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+  text-decoration: none;
+  position: relative;
+  top: 1rem;
+  cursor: pointer;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+}
+header .header-box .btn-free:hover {
+  background-color: hsl(355, 100%, 74%);
+  color: hsl(0, 0%, 100%);
+}
+header .header-box .btn-learn {
+  border: 1px solid hsl(0, 0%, 100%);
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  position: relative;
+  top: 1rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+}
+header .header-box .btn-learn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(355, 100%, 74%);
+}
+header .icon-close {
+  display: none;
+}
+header .btn-signup {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: "Overpass", sans-serif;
+  font-weight: 500;
+}
+header .btn-signup:hover {
+  background-color: hsl(355, 100%, 74%);
+  color: hsl(0, 0%, 100%);
+}
+header .btn-login {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+header .menu-layout {
+  display: flex;
+  gap: 4rem;
+}
+header .menu-link {
+  list-style: none;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  margin: 0 2rem;
+}
+header .menu-link:hover > .dropdown-nav__menu {
+  display: block;
+}
+header .menu-category a {
+  margin: 0 20px;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+header .nav-buttons {
+  align-items: baseline;
+  display: flex;
+  gap: 10px;
+}
+header .menu-category:hover {
+  text-decoration: underline;
+}
+header .dropdown-nav__menu:hover {
+  color: hsl(208, 49%, 24%);
+}
+header .menu-link a {
+  cursor: pointer;
+  font-weight: 500;
+}
+header .menu-link a:hover {
+  color: hsl(208, 49%, 24%);
+}
+
+@media (max-width: 700px) {
+  .section1 {
+    position: relative;
+  }
+  header {
+    background-image: url(../images/bg-pattern-intro-mobile.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-repeat: no-repeat;
+    background-position: 25% 31%;
+    width: 23.44rem;
+  }
+  header .header-box {
+    margin-top: 11rem;
+  }
+  header .head {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .hamburger {
+    display: block;
+    border: none;
+    background: none;
+    right: 4rem;
+  }
+  header .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    border-radius: 5px;
+    left: 1em;
+    padding: 1.5em;
+    width: 90%;
+    display: none;
+  }
+  header .navbar ul {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+  header .navbar .menu-link {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  header .navbar .menu-container__links button {
+    color: hsl(207, 13%, 34%);
+    margin-bottom: 1em;
+  }
+  header .navbar .menu-container__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: auto;
+    width: 90%;
+  }
+  header .navbar .active .navbar {
+    display: flex;
+  }
+  header .navbar #hamburger-menu {
+    cursor: pointer;
+  }
+  header .navbar .active #hamburger-menu {
+    content: url(/blogr-landing-page-main/blogr-landing-page-main/images/icon-close.svg);
+  }
+  header .navbar .menu-link li, header .navbar a {
+    color: hsl(237, 23%, 32%);
+  }
+  header .navbar .dropdown-nav__menu {
+    text-align: center;
+    background-color: hsl(240, 3%, 79%);
+    color: hsl(208, 49%, 24%);
+    width: 10.5rem;
+    /* height: 9rem; */
+    list-style: none;
+    box-shadow: none;
+    display: none;
+    position: relative;
+    line-height: 23px;
+    border-radius: 5px;
+    padding: 2px;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+  }
+  header .navbar .divider {
+    width: 90%;
+    margin: auto;
+    display: block;
+    height: 1px;
+    background-color: #9e9a9a;
+  }
+  header .navbar .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+  }
+  header .navbar .btn-free {
+    color: hsl(207, 13%, 34%);
+  }
+  header .navbar .btn-signup {
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(to right, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+  }
+  header h1 {
+    width: 23rem;
+    font-size: 30px;
+    text-align: center;
+  }
+  header p {
+    text-align: center;
+    position: relative;
+    margin-top: 1rem;
+    width: 18rem;
+  }
+}
+.future-container .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.future-container h1 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  color: hsl(208, 49%, 24%);
+  margin-top: 5rem;
+}
+.future-container h3 {
+  font-family: "Ubuntu", sans-serif;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 2rem;
+  position: relative;
+  left: 9rem;
+}
+.future-container .editor-heading, .future-container .content-description {
+  position: relative;
+  top: 3rem;
+}
+.future-container p {
+  line-height: 28px;
+  width: 31rem;
+  position: relative;
+  left: 9rem;
+}
+.future-container .left-f-section {
+  margin-left: 2rem;
+}
+.future-container .illustration-editor {
+  position: relative;
+  left: 14rem;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .future-container {
+    width: 23.44rem;
+    height: 67.9rem;
+  }
+  .future-container .row {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .future-container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .future-container h3 {
+    width: 13rem;
+    left: 3rem;
+    text-align: center;
+  }
+  .future-container p {
+    left: -1rem;
+    text-align: center;
+    width: 22rem;
+  }
+  .future-container .illustration-editor {
+    left: 0;
+    width: 100%;
+  }
+}
+.infrastructure-container {
+  background-color: hsl(237, 17%, 21%);
+  height: 400px;
+  background-image: url(../images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: -14rem -26rem;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.infrastructure-container h2, .infrastructure-container p {
+  color: hsl(0, 0%, 100%);
+}
+.infrastructure-container h2 {
+  font-size: 30px;
+  position: relative;
+  top: -7rem;
+  left: 2rem;
+}
+.infrastructure-container p {
+  line-height: 28px;
+  width: 35rem;
+  position: relative;
+  top: -5.5rem;
+  left: 2rem;
+}
+.infrastructure-container .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infrastructure-container .phone-img {
+  position: relative;
+  top: -4.5rem;
+  margin-left: 4rem;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .infrastructure-container {
+    width: 23.44rem;
+    height: 625px;
+  }
+  .infrastructure-container .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .infrastructure-container .phone-img {
+    width: 100%;
+    left: -3.7rem;
+  }
+  .infrastructure-container h2 {
+    top: -7rem;
+    left: 0;
+    text-align: center;
+  }
+  .infrastructure-container p {
+    width: 15rem;
+    position: relative;
+    text-align: center;
+    top: -5.5rem;
+    left: 4.5rem;
+  }
+}
+.source-container .row {
+  display: flex;
+  align-items: center;
+}
+.source-container h3 {
+  color: hsl(208, 49%, 24%);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  position: relative;
+  right: 14rem;
+  font-size: 30px;
+  top: 5rem;
+  margin-bottom: 1.5rem;
+}
+.source-container p {
+  width: 31rem;
+  line-height: 26px;
+  position: relative;
+  right: 14rem;
+  top: 4rem;
+  font-weight: 400;
+  font-family: "Overpass", sans-serif;
+  color: hsl(207, 13%, 34%);
+}
+.source-container .illust-laptop {
+  position: relative;
+  right: 17rem;
+  top: 7rem;
+}
+
+@media (max-width: 700px) {
+  .source-container {
+    width: 23.44rem;
+    height: 57.9rem;
+  }
+  .source-container .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .source-container .illust-laptop {
+    width: 328px;
+    right: 0;
+    top: 1rem;
+  }
+  .source-container h3 {
+    right: 0rem;
+    font-size: 28px;
+    top: 3rem;
+  }
+  .source-container .source-2 {
+    top: 5rem;
+  }
+  .source-container p {
+    right: 0rem;
+    text-align: center;
+    top: 4rem;
+    width: 18rem;
+  }
+}
+footer {
+  background-color: hsl(240, 10%, 16%);
+  height: 359px;
+  border-top-right-radius: 5rem;
+}
+footer h4 {
+  color: hsl(0, 0%, 100%);
+}
+footer .c-heading {
+  margin-top: -1.5rem;
+}
+footer .connect-heading {
+  margin-top: -3.1rem;
+}
+footer .foot-logo {
+  position: relative;
+  top: -2rem;
+}
+footer .footer_navigation {
+  list-style: none;
+  line-height: 30px;
+  margin-top: 4.5rem;
+}
+footer .footer_navigation a {
+  color: hsl(240, 3%, 79%);
+  text-decoration: none;
+}
+footer .footer_navigation a:hover {
+  text-decoration: underline;
+}
+footer .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 700px) {
+  footer {
+    width: 23.44rem;
+    height: 900px;
+  }
+  footer .foot-logo {
+    top: 2rem;
+  }
+  footer .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+}
+
+p {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+}

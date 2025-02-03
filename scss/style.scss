@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import 'header.scss';
+@import 'variables.scss';
+@import 'future.scss';
+@import 'infrastructure.scss';
+@import 'source.scss';
+@import 'footer.scss';
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+html{
+    font-size: $body-text;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: $ubuntu;
+}
+
+p{
+    font-family: $overpass;
+    font-weight: 300;
+}
