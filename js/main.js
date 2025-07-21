@@ -1,9 +1,9 @@
 // const menuBtn = document.querySelector(".btn-menu");
-const hamburger = document.getElementById('hamburger-menu');
+const toggleButton = document.getElementById('btn-toggle');
 const header = document.getElementById('header');
-// const links = document.querySelectorAll('.menu-link');
+const menuList = document.querySelectorAll('.menu-container__links');
 
 hamburger.addEventListener("click", function () {
   header.classList.toggle('active');
-  // menuList.classList.toggle('menu-container__links');
+  menuList.classList.toggle('active');
 });

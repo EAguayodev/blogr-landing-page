@@ -8,23 +8,41 @@ header {
   border-bottom-left-radius: 50px;
   padding: 1.5rem;
 }
-header navbar {
-  padding: 10px 20px;
+header .navbar {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
 }
-header .menu-container__links {
+header .navbar .head {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+header .navbar .logo {
+  margin-right: 2rem;
+}
+header .navbar .btn-toggle {
+  display: none;
+}
+header .navbar .menu-container__links {
   display: flex;
   flex-grow: 1;
   align-items: center;
 }
-header .dropdown-nav__menu {
+header .navbar .menu-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  margin: 0 2rem;
+}
+header .navbar .dropdown-nav__menu {
+  display: none;
   background-color: hsl(0, 0%, 100%);
   color: hsl(208, 49%, 24%);
   width: 10.5rem;
   height: 9rem;
   list-style: none;
-  display: none;
   box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
   -webkit-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
@@ -37,14 +55,14 @@ header .dropdown-nav__menu {
   top: 100%;
   z-index: 1;
 }
-header .divider {
+header .navbar .divider {
   display: none;
 }
-header .arrow {
+header .navbar .arrow {
   transition: transform 0.3s;
   cursor: pointer;
 }
-header button {
+header .navbar button {
   cursor: pointer;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -53,31 +71,88 @@ header button {
   border: none;
   color: hsl(0, 0%, 100%);
 }
-header button:hover .arrow {
+header .navbar button:hover .arrow {
   cursor: pointer;
   transform: rotate(180deg);
 }
-header .hamburger {
-  display: none;
-  cursor: pointer;
+header .navbar .btn-signup {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: "Overpass", sans-serif;
+  font-weight: 500;
 }
-header .header-box {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top: 7rem;
-}
-header .header-box h1,
-header .header-box p {
+header .navbar .btn-signup:hover {
+  background-color: hsl(355, 100%, 74%);
   color: hsl(0, 0%, 100%);
 }
+header .navbar .btn-login {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+header .navbar .menu-layout {
+  display: flex;
+  gap: 4rem;
+}
+header .navbar .menu-link {
+  list-style: none;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  margin: 0 2rem;
+}
+header .navbar .menu-link:hover > .dropdown-nav__menu {
+  display: block;
+}
+header .navbar .menu-category {
+  margin: 0 20px;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+header .navbar .nav-buttons {
+  align-items: baseline;
+  display: flex;
+  gap: 10px;
+}
+header .navbar .menu-category:hover {
+  text-decoration: underline;
+}
+header .navbar .dropdown-nav__menu:hover {
+  color: hsl(208, 49%, 24%);
+}
+header .navbar .menu-link a {
+  color: hsl(208, 49%, 24%);
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+header .navbar .menu-link a:hover {
+  color: hsl(208, 49%, 24%);
+}
+header .header-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 11rem;
+}
+header .header-box h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 4rem;
+  text-align: center;
+}
 header .header-box p {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
   position: relative;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 header .header-box .btn {
-  width: 137px;
+  width: 100%;
   padding: 10px 20px;
   border-radius: 50px;
   text-decoration: none;
@@ -111,182 +186,118 @@ header .header-box .btn-learn:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(355, 100%, 74%);
 }
-header .icon-close {
-  display: none;
-}
-header .btn-signup {
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(353, 100%, 62%);
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: "Overpass", sans-serif;
-  font-weight: 500;
-}
-header .btn-signup:hover {
-  background-color: hsl(355, 100%, 74%);
-  color: hsl(0, 0%, 100%);
-}
-header .btn-login {
-  background: transparent;
-  color: hsl(0, 0%, 100%);
-  text-decoration: none;
-}
-header .menu-layout {
-  display: flex;
-  gap: 4rem;
-}
-header .menu-link {
-  list-style: none;
-  position: relative;
-  color: hsl(0, 0%, 100%);
-  margin: 0 2rem;
-}
-header .menu-link:hover > .dropdown-nav__menu {
-  display: block;
-}
-header .menu-category a {
-  margin: 0 20px;
-  color: hsl(0, 0%, 100%);
-  text-decoration: none;
-}
-header .nav-buttons {
-  align-items: baseline;
-  display: flex;
-  gap: 10px;
-}
-header .menu-category:hover {
-  text-decoration: underline;
-}
-header .dropdown-nav__menu:hover {
-  color: hsl(208, 49%, 24%);
-}
-header .menu-link a {
-  cursor: pointer;
-  font-weight: 500;
-}
-header .menu-link a:hover {
-  color: hsl(208, 49%, 24%);
-}
 
-@media (max-width: 700px) {
-  .section1 {
-    position: relative;
-  }
+@media (max-width: 48rem) {
   header {
     background-image: url(../images/bg-pattern-intro-mobile.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-repeat: no-repeat;
     background-position: 25% 31%;
     width: 23.44rem;
   }
-  header .header-box {
-    margin-top: 11rem;
-  }
-  header .head {
+  header .navbar .mobile-header {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
-  header .hamburger {
+  header .navbar .mobile-header .btn-toggle {
     display: block;
-    border: none;
     background: none;
-    right: 4rem;
+    border: none;
+    cursor: pointer;
   }
-  header .navbar {
+  header .navbar .head {
+    display: none;
+  }
+  header .navbar .head.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: hsl(0, 0%, 100%);
-    position: absolute;
+    position: relative;
     border-radius: 5px;
     left: 1em;
     padding: 1.5em;
     width: 90%;
-    display: none;
   }
-  header .navbar ul {
-    text-align: center;
-    width: 90%;
-    margin: auto;
-  }
-  header .navbar .menu-link {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-  }
-  header .navbar .menu-container__links button {
-    color: hsl(207, 13%, 34%);
-    margin-bottom: 1em;
-  }
-  header .navbar .menu-container__links {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin: auto;
-    width: 90%;
-  }
-  header .navbar .active .navbar {
-    display: flex;
-  }
-  header .navbar #hamburger-menu {
-    cursor: pointer;
-  }
-  header .navbar .active #hamburger-menu {
-    content: url(/blogr-landing-page-main/blogr-landing-page-main/images/icon-close.svg);
-  }
-  header .navbar .menu-link li, header .navbar a {
-    color: hsl(237, 23%, 32%);
-  }
-  header .navbar .dropdown-nav__menu {
-    text-align: center;
-    background-color: hsl(240, 3%, 79%);
-    color: hsl(208, 49%, 24%);
-    width: 10.5rem;
-    /* height: 9rem; */
-    list-style: none;
-    box-shadow: none;
-    display: none;
-    position: relative;
-    line-height: 23px;
-    border-radius: 5px;
-    padding: 2px;
-    left: 0;
-    top: 100%;
-    z-index: 1;
-  }
-  header .navbar .divider {
-    width: 90%;
-    margin: auto;
+  header .navbar .btn-toggle {
     display: block;
-    height: 1px;
-    background-color: #9e9a9a;
   }
-  header .navbar .nav-buttons {
+  header .navbar .hamburger {
+    display: block;
+    border: none;
+    background: none;
+    right: 4rem;
+  }
+  header .navbar .icon-close {
+    display: none;
+  }
+  header .header-box {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    gap: 1em;
+    margin-top: 11rem;
   }
-  header .navbar .btn-free {
-    color: hsl(207, 13%, 34%);
-  }
-  header .navbar .btn-signup {
+  header .header-box h1 {
     color: hsl(0, 0%, 100%);
-    background: linear-gradient(to right, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
-  }
-  header h1 {
-    width: 23rem;
-    font-size: 30px;
+    font-size: 2.25rem;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
-  header p {
+  header .header-box p {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.25rem;
     text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  header .header-box .btn {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+  }
+  header .header-box p {
     position: relative;
     margin-top: 1rem;
-    width: 18rem;
+  }
+  header .header-box .btn {
+    width: 137px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+  }
+  header .header-box .btn-free {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(353, 100%, 62%);
+    text-decoration: none;
+    position: relative;
+    top: 1rem;
+    cursor: pointer;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+  }
+  header .header-box .btn-free:hover {
+    background-color: hsl(355, 100%, 74%);
+    color: hsl(0, 0%, 100%);
+  }
+  header .header-box .btn-learn {
+    border: 1px solid hsl(0, 0%, 100%);
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    position: relative;
+    top: 1rem;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+  }
+  header .header-box .btn-learn:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(355, 100%, 74%);
   }
 }
 .future-container .row {
@@ -356,7 +367,7 @@ header .menu-link a:hover {
   }
 }
 .infrastructure-container {
-  background-color: hsl(237, 17%, 21%);
+  background-color: hsl(237, 18%, 21%);
   height: 400px;
   background-image: url(../images/bg-pattern-circles.svg);
   background-repeat: no-repeat;
@@ -368,7 +379,7 @@ header .menu-link a:hover {
   color: hsl(0, 0%, 100%);
 }
 .infrastructure-container h2 {
-  font-size: 30px;
+  font-size: 1.875rem;
   position: relative;
   top: -7rem;
   left: 2rem;
@@ -430,7 +441,7 @@ header .menu-link a:hover {
   font-weight: 500;
   position: relative;
   right: 14rem;
-  font-size: 30px;
+  font-size: 1.875rem;
   top: 5rem;
   margin-bottom: 1.5rem;
 }
@@ -442,7 +453,7 @@ header .menu-link a:hover {
   top: 4rem;
   font-weight: 400;
   font-family: "Overpass", sans-serif;
-  color: hsl(207, 13%, 34%);
+  color: hsl(206, 13%, 34%);
 }
 .source-container .illust-laptop {
   position: relative;
@@ -467,7 +478,7 @@ header .menu-link a:hover {
   }
   .source-container h3 {
     right: 0rem;
-    font-size: 28px;
+    font-size: 1.75rem;
     top: 3rem;
   }
   .source-container .source-2 {
@@ -542,11 +553,11 @@ body {
 }
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 400;
   font-family: "Ubuntu", sans-serif;
 }
