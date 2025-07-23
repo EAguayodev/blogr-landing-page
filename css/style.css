@@ -24,6 +24,9 @@ header .navbar .logo {
 header .navbar .btn-toggle {
   display: none;
 }
+header .navbar .arrow-dark {
+  display: none;
+}
 header .navbar .menu-container__links {
   display: flex;
   flex-grow: 1;
@@ -194,16 +197,55 @@ header .header-box .btn-learn:hover {
     background-position: 25% 31%;
     width: 23.44rem;
   }
+  header .menu-link:hover > .dropdown-nav__menu {
+    box-shadow: none;
+    background-color: #d7d7d7;
+    color: hsl(208, 49%, 24%);
+    width: 276px;
+    position: absolute;
+    left: -7rem;
+  }
+  header .dropdown-nav__menu > li {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
   header .navbar .mobile-header {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
-  header .navbar .mobile-header .btn-toggle {
+  header .navbar .menu-container__links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header .navbar button {
+    color: hsl(208, 49%, 24%);
+  }
+  header .navbar button:hover .arrow-dark {
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+  header .navbar .btn-toggle {
     display: block;
     background: none;
     border: none;
     cursor: pointer;
+  }
+  header .navbar .btn-toggle .hamburger {
+    display: block;
+  }
+  header .navbar .btn-toggle .icon-close {
+    display: none;
+    z-index: 10;
+  }
+  header .navbar .btn-toggle.open .hamburger {
+    display: none;
+  }
+  header .navbar .btn-toggle.open .icon-close {
+    display: block;
   }
   header .navbar .head {
     display: none;
@@ -214,23 +256,44 @@ header .header-box .btn-learn:hover {
     justify-content: center;
     align-items: center;
     background-color: hsl(0, 0%, 100%);
-    position: relative;
+    position: absolute;
     border-radius: 5px;
-    left: 1em;
+    top: 5rem;
+    left: 1rem;
     padding: 1.5em;
     width: 90%;
+    height: 12%;
+    z-index: 10;
   }
-  header .navbar .btn-toggle {
-    display: block;
-  }
-  header .navbar .hamburger {
-    display: block;
-    border: none;
-    background: none;
-    right: 4rem;
-  }
-  header .navbar .icon-close {
+  header .navbar .arrow {
     display: none;
+  }
+  header .navbar .arrow-dark {
+    display: inline-block;
+  }
+  header .navbar .menu-link {
+    margin: 18px 0;
+  }
+  header .navbar .divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: hsl(240, 10%, 16%);
+    margin: 0.5rem 0;
+  }
+  header .navbar .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  header .navbar .btn-login {
+    background: transparent;
+    color: hsl(208, 49%, 24%);
+    text-decoration: none;
+  }
+  header .navbar .btn-signup {
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    color: hsl(0, 0%, 100%);
   }
   header .header-box {
     align-items: center;

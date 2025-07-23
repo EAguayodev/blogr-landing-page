@@ -1,9 +1,8 @@
-// const menuBtn = document.querySelector(".btn-menu");
-const toggleButton = document.getElementById('btn-toggle');
-const header = document.getElementById('header');
+const toggleButton = document.querySelector('.btn-toggle');;
+const header = document.querySelector('.head');
 const menuList = document.querySelectorAll('.menu-container__links');
 
-hamburger.addEventListener("click", function () {
+toggleButton.addEventListener("click", function () {
+  toggleButton.classList.toggle('open');
   header.classList.toggle('active');
-  menuList.classList.toggle('active');
 });

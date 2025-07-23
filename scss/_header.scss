@@ -28,6 +28,9 @@ header {
             display: none;
         }
 
+        .arrow-dark {
+            display: none;
+        }
 
         .menu-container__links {
             display: flex;
@@ -229,18 +232,67 @@ header {
         background-position: 25% 31%;
         width: 23.44rem;
 
+        .menu-link:hover>.dropdown-nav__menu {
+            box-shadow: none;
+            background-color: #d7d7d7;
+            color: $very-dark-blue;
+            width: 276px;
+            position: absolute;
+            left: -7rem;
+        }
+
+        .dropdown-nav__menu>li {
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
         .navbar {
             .mobile-header {
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
+            }
 
-                .btn-toggle {
+            .menu-container__links {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            button {
+                color: $very-dark-blue;
+            }
+
+            button:hover .arrow-dark {
+                cursor: pointer;
+                transform: rotate(180deg);
+            }
+
+
+            .btn-toggle {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                .hamburger {
                     display: block;
-                    background: none;
-                    border: none;
-                    cursor: pointer;
                 }
+
+                .icon-close {
+                    display: none;
+                    z-index: 10;
+                }
+            }
+
+            .btn-toggle.open .hamburger {
+                display: none;
+            }
+
+            .btn-toggle.open .icon-close {
+                display: block;
             }
 
             .head {
@@ -253,27 +305,51 @@ header {
                 justify-content: center;
                 align-items: center;
                 background-color: $white;
-                position: relative;
+                position: absolute;
                 border-radius: 5px;
-                left: 1em;
+                top: 5rem;
+                left: 1rem;
                 padding: 1.5em;
                 width: 90%;
+                height: 12%;
+                z-index: 10;
             }
 
-            .btn-toggle {
-                display: block;
-            }
-
-            .hamburger {
-                display: block;
-                border: none;
-                background: none;
-                // position: absolute;
-                right: 4rem;
-            }
-
-            .icon-close {
+            .arrow {
                 display: none;
+            }
+
+            .arrow-dark {
+                display: inline-block;
+            }
+
+            .menu-link {
+                margin: 18px 0;
+            }
+
+            .divider {
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: $very-dark-black-blue;
+                margin: 0.5rem 0;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 1rem;
+            }
+
+            .btn-login {
+                background: transparent;
+                color: $very-dark-blue;
+                text-decoration: none;
+            }
+
+            .btn-signup {
+                background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+                color: $white;
             }
         }
 
