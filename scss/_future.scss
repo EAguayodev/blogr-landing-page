@@ -5,12 +5,14 @@
         justify-content: center;
         align-items: center;
     }
+    
     h1{
         text-align: center;
         font-family: $ubuntu;
         color: $very-dark-blue;
         margin-top: 5rem;
     }
+
     h3{
         font-family: $ubuntu;
         color: $very-dark-blue;
@@ -43,11 +45,10 @@
     }
 }
 
-@media(max-width: 700px){
+@media(max-width: 43.75rem){
     // future section scss
         .future-container {
-            width: 23.44rem;
-            height: 67.9rem;
+            height: 100%;
     
             .row {
                 display: flex;
@@ -70,6 +71,10 @@
                 left: -1rem;
                 text-align: center;
                 width: 22rem;
+            }
+
+            .content-description{
+                margin-bottom: 7.5rem;
             }
     
             .illustration-editor {

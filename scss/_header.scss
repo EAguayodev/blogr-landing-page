@@ -46,10 +46,15 @@ header {
             margin: 0 2rem;
         }
 
+        .menu-link:hover {
+            text-decoration: underline;
+            text-decoration-color: $white;
+        }
 
         .dropdown-nav__menu {
             display: none;
             background-color: $white;
+            border-radius: 5px;
             color: $very-dark-blue;
             width: 10.5rem;
             height: 9rem;
@@ -58,7 +63,6 @@ header {
             -webkit-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
             -moz-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
             line-height: 23px;
-            border-radius: 0.125rem;
             padding: 10px;
             margin: 1rem 0 0 0.8rem;
             position: absolute;
@@ -124,7 +128,7 @@ header {
             margin: 0 2rem;
         }
 
-        .menu-link:hover>.dropdown-nav__menu {
+        .menu-link:hover >.dropdown-nav__menu {
             display: block;
         }
 
@@ -230,7 +234,6 @@ header {
         background-image: url(../images/bg-pattern-intro-mobile.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
         background-repeat: no-repeat;
         background-position: 25% 31%;
-        width: 23.44rem;
 
         .menu-link:hover>.dropdown-nav__menu {
             box-shadow: none;
@@ -358,7 +361,6 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 11rem;
 
             h1 {
                 color: $white;

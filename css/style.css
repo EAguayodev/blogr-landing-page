@@ -39,9 +39,14 @@ header .navbar .menu-link {
   color: hsl(0, 0%, 100%);
   margin: 0 2rem;
 }
+header .navbar .menu-link:hover {
+  text-decoration: underline;
+  text-decoration-color: hsl(0, 0%, 100%);
+}
 header .navbar .dropdown-nav__menu {
   display: none;
   background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
   color: hsl(208, 49%, 24%);
   width: 10.5rem;
   height: 9rem;
@@ -50,7 +55,6 @@ header .navbar .dropdown-nav__menu {
   -webkit-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
   line-height: 23px;
-  border-radius: 0.125rem;
   padding: 10px;
   margin: 1rem 0 0 0.8rem;
   position: absolute;
@@ -195,7 +199,6 @@ header .header-box .btn-learn:hover {
     background-image: url(../images/bg-pattern-intro-mobile.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-repeat: no-repeat;
     background-position: 25% 31%;
-    width: 23.44rem;
   }
   header .menu-link:hover > .dropdown-nav__menu {
     box-shadow: none;
@@ -300,7 +303,6 @@ header .header-box .btn-learn:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 11rem;
   }
   header .header-box h1 {
     color: hsl(0, 0%, 100%);
@@ -400,10 +402,9 @@ header .header-box .btn-learn:hover {
   width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 43.75rem) {
   .future-container {
-    width: 23.44rem;
-    height: 67.9rem;
+    height: 100%;
   }
   .future-container .row {
     display: flex;
@@ -423,6 +424,9 @@ header .header-box .btn-learn:hover {
     left: -1rem;
     text-align: center;
     width: 22rem;
+  }
+  .future-container .content-description {
+    margin-bottom: 7.5rem;
   }
   .future-container .illustration-editor {
     left: 0;
@@ -469,7 +473,7 @@ header .header-box .btn-learn:hover {
 @media (max-width: 700px) {
   .infrastructure-container {
     width: 23.44rem;
-    height: 625px;
+    height: 100%;
   }
   .infrastructure-container .row {
     display: flex;
@@ -524,23 +528,26 @@ header .header-box .btn-learn:hover {
   top: 7rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 43.75rem) {
   .source-container {
     width: 23.44rem;
-    height: 57.9rem;
+    height: 100%;
   }
   .source-container .row {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 7rem;
   }
   .source-container .illust-laptop {
-    width: 328px;
+    width: 100%;
     right: 0;
     top: 1rem;
   }
   .source-container h3 {
     right: 0rem;
+    left: 0rem;
+    text-align: center;
     font-size: 1.75rem;
     top: 3rem;
   }
@@ -592,8 +599,7 @@ footer .row {
 
 @media (max-width: 700px) {
   footer {
-    width: 23.44rem;
-    height: 900px;
+    height: 100%;
   }
   footer .foot-logo {
     top: 2rem;

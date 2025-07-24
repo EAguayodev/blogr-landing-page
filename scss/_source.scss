@@ -37,25 +37,28 @@
     }
 }
 
-@media(max-width: 700px){
+@media(max-width: 43.75rem){
     .source-container {
             width: 23.44rem;
-            height: 57.9rem;
+            height: 100%;
     
             .row {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                margin-bottom: 7rem;
             }
     
             .illust-laptop {
-                width: 328px;
+                width: 100%;
                 right: 0;
                 top: 1rem;
             }
     
             h3 {
                 right: 0rem;
+                left: 0rem;
+                text-align: center;
                 font-size: 1.75rem;
                 top: 3rem;
             }
