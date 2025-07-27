@@ -88,9 +88,9 @@ For continued development, I plan to integrate other CSS frameworks like Bootstr
 
 ### Useful resources
 
-- [w3schools](https://www.w3schools.com/sass/default.php) - The w3schools website helped me while debugging the dropdown menus on the challenge to ensure I was writing the nesting code properly to hit the right binary patterns.
+- [https://www.w3schools.com/sass/default.php](W3schools) - The w3schools website helped me while debugging the dropdown menus on the challenge to ensure I was writing the nesting code properly to hit the right binary patterns.
 
-- [Sass](https://sass-lang.com/) - The Sass documentation helped with my process and refreshing of memory with nesting and targeting the right specificity while building out the challenge.
+- [https://sass-lang.com/](Sass) - The Sass documentation helped with my process and refreshing of memory with nesting and targeting the right specificity while building out the challenge.
 
 
 
