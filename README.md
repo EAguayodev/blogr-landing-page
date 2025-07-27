@@ -22,78 +22,82 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-
 ### Links
 
-- Solution URL: [Github]()
-- Live Site URL: [Vercel]()
+- Solution URL: [](Github)
+- Live Site URL: [https://blogr-landing-page-azure.vercel.app/](Vercel)
 
 ## My process
+My process involved using HTML for structure, SCSS for modular and compiled CSS styling, and JavaScript to build out the mobile menu functionality.
+
+One challenge I faced during the project was understanding binary and specificity when using SCSS for CSS compiling. I overcame this by thoroughly reviewing the MDN documentation on specificity, which helped me troubleshoot style conflicts and write more predictable, maintainable code.
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- SCSS
+- JavaScript
+- Desktop-first workflow
+
 
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Major learnings when completing the project was the scss nesting to ensure proper specificity for the scss code compiling into css. Improper nesting 
+of scss elements can cause issues when the browser needs to specify which css to rendor in the browser after compiled. Before deployment, I had to adjust the nesting for the dropdown menus on desktop to show, and allow the user (if a real world scenario) to show the dropdown menu and allow them to select the link of their choice. 
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+ <ul class="menu-link">    
+    <button>Product
+       <img class="arrow" src="images/icon-arrow-light.svg" alt="arrow">
+       <img class="arrow-dark" src="images/icon-arrow-light copy.svg" alt="icon arrow dark">
+     </button>
+     <div class="dropdown-nav__menu">
+       <li><a href="#">Overview</a></li>
+       <li><a href="#">Pricing</a></li>
+       <li><a href="#">Marketplace</a></li>
+       <li><a href="#">Features</a></li>
+       <li><a href="#">Integrations</a></li>
+     </div>
+  </ul>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+  header {
+    background-image: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl    (353, 100%, 62%));
+    background-repeat: no-repeat;
+    background-position: 25% center;
+    height: 600px;
+    border-bottom-left-radius: 50px;
+    padding: 1.5rem;
+  }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+toggleButton.addEventListener("click", function () {
+  toggleButton.classList.toggle('open');
+  header.classList.toggle('active');
+});   
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I recently completed the Blogr Landing Page challenge on Frontend Mentor, where I focused on building a responsive layout using HTML and SCSS. This project helped reinforce my understanding of component-based styling and responsive design techniques.
+
+For continued development, I plan to integrate other CSS frameworks like Bootstrap and Tailwind CSS into future projects to expand my styling toolkit and improve development efficiency. I'll also continue refining my skills in SCSS.
 
 
 ### Useful resources
 
-- [w3schools](https://www.w3schools.com/sass/default.php) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Sass](https://sass-lang.com/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [w3schools](https://www.w3schools.com/sass/default.php) - The w3schools website helped me while debugging the dropdown menus on the challenge to ensure I was writing the nesting code properly to hit the right binary patterns.
+
+- [Sass](https://sass-lang.com/) - The Sass documentation helped with my process and refreshing of memory with nesting and targeting the right specificity while building out the challenge.
 
 
 
 ## Author
 
-- Website - [Eric Aguayo](https://www.ericaguayo.com)
 - Frontend Mentor - [@EAguayodev](https://www.frontendmentor.io/profile/EAguayodev)
-- Twitter - [@eric_emaildev](https://www.twitter.com/eric_emaildev)
 
 
 ## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Big thanks to Frontend Mentor for providing this challenge—it's been a great resource for hands-on learning and skill development.

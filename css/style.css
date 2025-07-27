@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 header {
   background-image: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   background-repeat: no-repeat;
@@ -8,44 +6,52 @@ header {
   border-bottom-left-radius: 50px;
   padding: 1.5rem;
 }
-header .navbar {
+
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .navbar .head {
+.navbar .head {
   display: flex;
   align-items: center;
   width: 100%;
 }
-header .navbar .logo {
+.navbar .logo {
   margin-right: 2rem;
 }
-header .navbar .btn-toggle {
+.navbar .btn-toggle {
   display: none;
 }
-header .navbar .arrow-dark {
+.navbar .arrow-dark {
   display: none;
 }
-header .navbar .menu-container__links {
+.navbar .menu-container__links {
   display: flex;
   flex-grow: 1;
   align-items: center;
 }
-header .navbar .menu-link {
+.navbar .menu-link:hover > .dropdown-nav__menu {
+  display: block;
+}
+.navbar .menu-link {
   display: flex;
   align-items: center;
   position: relative;
   color: hsl(0, 0%, 100%);
   margin: 0 2rem;
 }
-header .navbar .menu-link:hover {
+.navbar .menu-link:hover {
   text-decoration: underline;
   text-decoration-color: hsl(0, 0%, 100%);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
-header .navbar .dropdown-nav__menu {
+.navbar .dropdown-nav__menu {
   display: none;
+  position: absolute;
   background-color: hsl(0, 0%, 100%);
+  top: 1.425rem;
   border-radius: 5px;
   color: hsl(208, 49%, 24%);
   width: 10.5rem;
@@ -55,21 +61,17 @@ header .navbar .dropdown-nav__menu {
   -webkit-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: -5px 29px 30px 1px rgba(0, 0, 0, 0.31);
   line-height: 23px;
-  padding: 10px;
-  margin: 1rem 0 0 0.8rem;
-  position: absolute;
-  left: 0;
-  top: 100%;
+  padding: 10px 20px;
   z-index: 1;
 }
-header .navbar .divider {
+.navbar .divider {
   display: none;
 }
-header .navbar .arrow {
+.navbar .arrow {
   transition: transform 0.3s;
   cursor: pointer;
 }
-header .navbar button {
+.navbar button {
   cursor: pointer;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -78,11 +80,11 @@ header .navbar button {
   border: none;
   color: hsl(0, 0%, 100%);
 }
-header .navbar button:hover .arrow {
+.navbar button:hover .arrow {
   cursor: pointer;
   transform: rotate(180deg);
 }
-header .navbar .btn-signup {
+.navbar .btn-signup {
   background-color: hsl(0, 0%, 100%);
   color: hsl(353, 100%, 62%);
   padding: 10px 20px;
@@ -91,66 +93,54 @@ header .navbar .btn-signup {
   font-family: "Overpass", sans-serif;
   font-weight: 500;
 }
-header .navbar .btn-signup:hover {
+.navbar .btn-signup:hover {
   background-color: hsl(355, 100%, 74%);
   color: hsl(0, 0%, 100%);
 }
-header .navbar .btn-login {
+.navbar .btn-login {
   background: transparent;
   color: hsl(0, 0%, 100%);
   text-decoration: none;
 }
-header .navbar .menu-layout {
-  display: flex;
-  gap: 4rem;
-}
-header .navbar .menu-link {
+.navbar .menu-link {
   list-style: none;
   position: relative;
   color: hsl(0, 0%, 100%);
   margin: 0 2rem;
 }
-header .navbar .menu-link:hover > .dropdown-nav__menu {
-  display: block;
-}
-header .navbar .menu-category {
-  margin: 0 20px;
-  color: hsl(0, 0%, 100%);
-  text-decoration: none;
-}
-header .navbar .nav-buttons {
+.navbar .nav-buttons {
   align-items: baseline;
   display: flex;
   gap: 10px;
 }
-header .navbar .menu-category:hover {
+.navbar .menu-category:hover {
   text-decoration: underline;
 }
-header .navbar .dropdown-nav__menu:hover {
-  color: hsl(208, 49%, 24%);
-}
-header .navbar .menu-link a {
+.navbar .menu-link a {
   color: hsl(208, 49%, 24%);
   cursor: pointer;
   font-weight: 500;
   text-decoration: none;
+  font-family: "Overpass", sans-serif;
 }
-header .navbar .menu-link a:hover {
-  color: hsl(208, 49%, 24%);
+.navbar a:hover {
+  color: hsl(240, 10%, 16%);
+  font-weight: bold;
 }
-header .header-box {
+
+.header-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 11rem;
 }
-header .header-box h1 {
+.header-box h1 {
   color: hsl(0, 0%, 100%);
   font-size: 4rem;
   text-align: center;
 }
-header .header-box p {
+.header-box p {
   color: hsl(0, 0%, 100%);
   text-align: center;
   position: relative;
@@ -158,14 +148,14 @@ header .header-box p {
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
-header .header-box .btn {
+.header-box .btn {
   width: 100%;
   padding: 10px 20px;
   border-radius: 50px;
   text-decoration: none;
   color: hsl(0, 0%, 100%);
 }
-header .header-box .btn-free {
+.header-box .btn-free {
   background-color: hsl(0, 0%, 100%);
   color: hsl(353, 100%, 62%);
   text-decoration: none;
@@ -175,11 +165,11 @@ header .header-box .btn-free {
   font-family: "Overpass", sans-serif;
   font-weight: 700;
 }
-header .header-box .btn-free:hover {
+.header-box .btn-free:hover {
   background-color: hsl(355, 100%, 74%);
   color: hsl(0, 0%, 100%);
 }
-header .header-box .btn-learn {
+.header-box .btn-learn {
   border: 1px solid hsl(0, 0%, 100%);
   background-color: transparent;
   color: hsl(0, 0%, 100%);
@@ -189,7 +179,7 @@ header .header-box .btn-learn {
   font-family: "Overpass", sans-serif;
   font-weight: 700;
 }
-header .header-box .btn-learn:hover {
+.header-box .btn-learn:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(355, 100%, 74%);
 }
