@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](Github)
+- Solution URL: [https://github.com/EAguayodev/blogr-landing-page](Github)
 - Live Site URL: [https://blogr-landing-page-azure.vercel.app/](Vercel)
 
 ## My process
