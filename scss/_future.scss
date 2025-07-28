@@ -2,7 +2,7 @@
    
     .row{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
     
@@ -17,8 +17,6 @@
         font-family: $ubuntu;
         color: $very-dark-blue;
         margin-bottom: 2rem;
-        position: relative;
-        left: 9rem;
     }
 
     .editor-heading, .content-description
@@ -30,19 +28,8 @@
     p{
         line-height: 28px;
         width: 31rem;
-        position: relative;
-        left: 9rem;
     }
 
-    .left-f-section{
-        margin-left: 2rem;
-    }
-
-    .illustration-editor{
-        position: relative;
-        left: 14rem;
-        width: 100%;
-    }
 }
 
 @media(max-width: 43.75rem){
@@ -63,6 +50,7 @@
             h3 {
                 width: 13rem;
                 left: 3rem;
+                position: relative;
                 text-align: center;
             }
     
@@ -77,7 +65,6 @@
             }
     
             .illustration-editor {
-                left: 0;
                 width: 100%;
             }
         }
