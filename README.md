@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/EAguayodev/blogr-landing-page](Github)
-- Live Site URL: [https://blogr-landing-page-azure.vercel.app/](Vercel)
+- Solution URL: [Github](https://github.com/EAguayodev/blogr-landing-page)
+- Live Site URL: [Netlify](https://blogr-landing-page-main-1.netlify.app/)
 
 ## My process
 My process involved using HTML for structure, SCSS for modular and compiled CSS styling, and JavaScript to build out the mobile menu functionality.
